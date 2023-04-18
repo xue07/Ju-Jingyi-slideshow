@@ -37,10 +37,10 @@
         bottom: 0;
         right: 0;
         margin: auto;
-        width: 762px;
+        width: 800px;
         height: 500px;
         overflow: hidden;
-        /* background-color: pink; */
+        transition: .5s linear;       
     }
 
     .icon-circle-left,
@@ -74,8 +74,9 @@
     }
 
     img {
-        width: 762px;
+        width: 800px;
         height: 500px;
+        transition: .5s linear;
     }
 
     ol {
@@ -122,6 +123,42 @@
     .jjy1,
     .jjy2{
         margin-top: 40px;
+    }
+    
+    @media (min-width:0) and (max-width:800px) {
+        .lunbotu {
+            width: 400px;
+            height: 250px;
+        }
+
+        img {
+            width: 400px;
+            height: 250px;
+        }
+    }
+
+    @media (min-width:800px) and (max-width:1080px) {
+        .lunbotu {
+            width: 600px;
+            height: 375px;
+        }
+
+        img {
+            width: 600px;
+            height: 375px;
+        }
+    }
+
+    @media (min-width:1080px) {
+        .lunbotu {
+            width: 800px;
+            height: 500px;
+        }
+
+        img {
+            width: 800px;
+            height: 500px;
+        }
     }
 </style>
 
