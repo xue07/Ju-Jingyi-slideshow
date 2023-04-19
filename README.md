@@ -1,18 +1,19 @@
-[鞠婧祎](https://baike.baidu.com/item/%E9%9E%A0%E5%A9%A7%E7%A5%8E/10201840) — New Wave JavaScript
+[何玉莹](http://zzhou.3vdo.club) — New Wave JavaScript
 ==================================================
 
-[![Baidu](#)](#)
+[[Baidu](#)](#)
 
-Contribution Guides### Ju Jingyi wheel sowing pictures--------------------------------------
+### Ju Jingyi wheel sowing pictures--------------------------------------
 
-Ju Jingyi is good at dancing, playing the piano and playing the violin. In addition, she often shares anecdotes with her fans on her personal social media platform.
-
-1. [何玉莹](#)
-2. [你是我儿](#)
-3. [YES](#)
+ He Yuying is the son of zhou,You are not a filial son,beat you to death!!!
 
 
-
+1. [何玉莹:Hello,What's my name?](#)
+2. [zhou:you are a pig](#)
+3. [何玉莹:???,Who are you?](#)
+4. [zhou:I'm your father](#)
+5. [何玉莹:YES](#)
+6. [zhou:Daddy loves you.](#)
 
 
 
