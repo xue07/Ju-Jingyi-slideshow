@@ -1,7 +1,7 @@
-[何玉莹](http://zzhou.3vdo.club) — New Wave JavaScript
+[何玉莹](http://zzhou.3vdo.club) — Clever son
 ==================================================
 
-[[Baidu](#)](#)
+[Baidu](#)
 
 ### Ju Jingyi wheel sowing pictures--------------------------------------
 
