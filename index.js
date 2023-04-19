@@ -2,30 +2,6 @@
 //开始设置监听window，等待页面加载完
 window.addEventListener('load', function () {
 
-    //封装个动画函数方便使用,使用定时器完成
-    // 记得给传入需要做动画的参数添加定位
-    function animate(obj, target, callback) {
-        //先清除以前的定时器，只保留当前一个定时器，防止点击多次
-        clearInterval(obj.timer);
-        obj.timer = setInterval(function () {
-            //步长值写到定时器里面
-            //把步长值改为整数，不出现小数点，注意可能为负值
-            let step = (target - obj.offsetLeft) / 10;
-            step = step > 0 ? Math.ceil(step) : Math.floor(step);
-            if (obj.offsetLeft == target) {
-                //停止动画，本质是停止定时器
-                clearInterval(obj.timer);
-                // 回调函数写到定时器结束里面
-                if (callback) {
-                    callback();
-                }
-            }
-            // 把每次步长值改为一个慢慢变小的值 步长公式:(目标值 - 现在的位置) / 10
-            obj.style.left = obj.offsetLeft + step + 'px';
-        }, 15);
-    };
-
-
     let lunbotu = this.document.querySelector('.lunbotu');
     let circle_left = this.document.querySelector('.icon-circle-left');
     let circle_right = this.document.querySelector('.icon-circle-right');
@@ -63,7 +39,7 @@ window.addEventListener('load', function () {
         //把小li 使用apppendchild添加到ol里
         ol.appendChild(li);
         ol.children[0].className = 'dot_colors';
-        li.addEventListener('mouseenter', function () {
+        li.addEventListener('click', function () {
             for (let i = 0; i < ol.children.length; i++) {
                 ol.children[i].className = '';
             }
@@ -79,7 +55,11 @@ window.addEventListener('load', function () {
             // console.log(imgWidth);
             let target = -index * imgWidth;
             //调用动画函数
-            animate(ul, -index * imgWidth);
+            $(function () {
+                $("ul").stop(true).animate({
+                    left: -index * imgWidth,
+                }, 500)
+            })
         });
     };
 
@@ -91,7 +71,6 @@ window.addEventListener('load', function () {
     let flag = true;
     //每点击箭头按钮，图片滚动一张
     circle_left.addEventListener('click', function () {
-
         if (flag) {
             flag = false; //关闭节流
             // console.log(num);
@@ -102,10 +81,13 @@ window.addEventListener('load', function () {
                 num = ul.children.length - 1
             }
             num--;
-            animate(ul, -num * imgWidth, function () {
-                flag = true;
-            });
-
+            $(function () {
+                $("ul").stop(true).animate({
+                    left: -num * imgWidth,
+                }, 500, function () {
+                    flag = true;
+                })
+            })
 
             //点击左侧按钮，小圆圈跟随一起变化，可以声明个变量控制小圆圈播放
             if (circle == 0) {
@@ -115,7 +97,6 @@ window.addEventListener('load', function () {
             currentColor()
         };
     })
-
     circle_right.addEventListener('click', function () {
         if (flag) {
             flag = false; //关闭节流
@@ -126,9 +107,13 @@ window.addEventListener('load', function () {
                 num = 0
             }
             num++;
-            animate(ul, -num * imgWidth, function () {
-                flag = true;
-            });
+            $(function () {
+                $("ul").stop(true).animate({
+                    left: -num * imgWidth,
+                }, 500, function () {
+                    flag = true;
+                })
+            })
             //点击右侧按钮，小圆圈跟随一起变化，可以声明个变量控制小圆圈播放
             circle++;
             if (circle == ul.children.length - 1) {
